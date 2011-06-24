@@ -105,6 +105,13 @@ nmap ,nt :NERDTreeToggle
 " Show hidden files in NerdTree
 let NERDTreeShowHidden=1
 
+"------------------------------------------------------------ "
+" SnipMate needs a little tweaking to read my custom snippets "
+"------------------------------------------------------------ "
+let g:snippets_dir = '$VIM_DIR/bundle/snipmate/snippets/, $VIM_DIR/bundle/mySnippets/snippets/'
+
+"------------------------------------------------------------ "
+
 " ####  MAPPINGS ###
 
 "Map escape key to ii -- much faster
@@ -167,9 +174,9 @@ iab llorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
 autocmd BufRead,BufNewFile *.tex setlocal wrap | setlocal textwidth=70 | setlocal spell spelllang=en_us
 
 " Run latexmk in current file using latexmk
-abbrev latex ! latexmk -pdfps -pv %:p<cr>
+abbrev compile ! latexmk -pdfps -pv %:p<cr>
 " Force it if necessary
-abbrev latex ! latexmk -f -pdfps -pv %:p<cr>
+abbrev fcompile ! latexmk -f -pdfps -pv %:p<cr>
 
 " -------------------------------------------------------------------- "
 
