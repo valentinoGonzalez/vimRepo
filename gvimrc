@@ -11,7 +11,7 @@ set linespace=2
 set go-=T
 
 " Shortcuts that only work on a Mac
-let uname = substitute(system('hostname'), '\n', '', '')
+let uname = substitute(system('uname'), '\n', '', '')
 if uname == "Darwin"
     " Shortcut to imitate TextMate commenting. Requires T-Comment plugin
     map <D-/> <c-_><c-_>
@@ -27,9 +27,10 @@ if uname == "Darwin"
 endif
 
 " Font type and size, depends on resolution of machine
-if $HOSTNAME=='antu.ucolick.org'
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == "antu.ucolick.org"
     set guifont=Monaco:h13
-elseif $HOSTNAME=='homehost'
+elseif hostname == 'homehost'
     set guifont=Monaco:h12
 endif
 

@@ -5,11 +5,12 @@
 " Now using pathogen and submodules for easier maintenance
 " see: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 " Compatibility with Vi, nah
 set nocompatible
+
+runtime! autoload/pathogen.vim
+silent! call pathogen#runtime_append_all_bundles()
+silent! call pathogen#helptags()
 
 " Enable filetypes
 filetype on
@@ -85,8 +86,8 @@ set wildmode=list:longest
 if has("autocmd")
     " Source the vimrc/gvimrc files after saving them. This way, you 
     " don't have to reload Vim to see the changes.
-    autocmd bufwritepost .vimrc source $VIM/vimrc
-    autocmd bufwritepost .gvimrc source $VIM/gvimrc
+    autocmd bufwritepost .vimrc source $VIM_DIR/vimrc
+    autocmd bufwritepost .gvimrc source $VIM_DIR/gvimrc
 
     " Automatically change current directory to that of the file in the buffer
     autocmd BufEnter * cd %:p:h
@@ -113,8 +114,8 @@ imap ii <esc>
 nmap <space> :
 
 " Shortcut for editing  vimrc file in a new tab
-nmap ,ev :tabedit $VIM/vimrc<cr>
-nmap ,egv :tabedit $VIM/gvimrc<cr>
+nmap ,ev :tabedit $VIM_DIR/vimrc<cr>
+nmap ,egv :tabedit $VIM_DIR/gvimrc<cr>
 
 " Delete all buffers (via Derek Wyatt)
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
