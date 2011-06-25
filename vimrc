@@ -96,6 +96,10 @@ endif
 " Change zen coding plugin expansion key to shift + e
 let g:user_zen_expandabbr_key = '<C-e>'
 
+" Required by Latex-Suite and better automatic recognition of .tex files
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
 " ------------------------ "
 " NERDTREE PLUGIN SETTINGS "
 " ------------------------ "
@@ -179,7 +183,4 @@ abbrev compile ! latexmk -pdfps -pv %:p<cr>
 abbrev fcompile ! latexmk -f -pdfps -pv %:p<cr>
 
 " -------------------------------------------------------------------- "
-
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
 
