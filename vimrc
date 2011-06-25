@@ -180,3 +180,6 @@ abbrev fcompile ! latexmk -f -pdfps -pv %:p<cr>
 
 " -------------------------------------------------------------------- "
 
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+

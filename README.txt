@@ -13,4 +13,4 @@ And this one for the graphical interface only commands:
 ln -s <youPath/gvimrc ~/.gvimrc
 
 And finally, add this to you .bashrc:
-export VIMRC=$HOME/.vim/vimrc
+export VIM_DIR=$HOME/.vim/vimrc

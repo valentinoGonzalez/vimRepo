@@ -19,3 +19,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = http://github.com/ervandew/supertab
+[submodule "bundle/latexSuite"]
+	path = bundle/latexSuite
+	url = git://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
