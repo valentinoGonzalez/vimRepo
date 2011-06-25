@@ -30,7 +30,7 @@ endif
 let hostname = substitute(system('hostname'), '\n', '', '')
 if hostname == "antu.ucolick.org"
     set guifont=Monaco:h13
-elseif hostname == 'homehost'
+elseif hostname == "Valentino-Gonzalezs-MacBook-Pro.local"
     set guifont=Monaco:h12
 endif
 
