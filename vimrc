@@ -108,7 +108,7 @@ let NERDTreeShowHidden=1
 "------------------------------------------------------------ "
 " SnipMate needs a little tweaking to read my custom snippets "
 "------------------------------------------------------------ "
-let g:snippets_dir = '$VIM_DIR/bundle/snipmate/snippets/, $VIM_DIR/bundle/mySnippets/snippets/'
+let g:snippets_dir = '$VIM_DIR/bundle/mySnippets/snippets/, $VIM_DIR/bundle/snipmate/snippets/'
 
 "------------------------------------------------------------ "
 
