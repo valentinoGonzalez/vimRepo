@@ -22,3 +22,6 @@
 [submodule "bundle/latexSuite"]
 	path = bundle/latexSuite
 	url = git://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
